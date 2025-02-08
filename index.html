@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أوتشوبا للدراسة في روسيا - خدمات تعليمية متكاملة">
     <title data-translate="site_title">أوتشوبا للدراسة في روسيا</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- تحسين تحميل الموارد -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- تحميل الستايل الأساسي -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- نص احتياطي لتحميل الستايل -->
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
 </head>
 <body>
     <!-- القائمة العلوية -->
@@ -137,127 +152,182 @@
         </div>
     </section>
 
-    <!-- قسم الخدمات -->
-    <section class="services py-5" id="services">
+    <!-- قسم خدماتنا -->
+    <section class="services-section">
         <div class="container">
-            <h2 class="text-center mb-5" data-translate="our_services">خدماتنا</h2>
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle" data-translate="services_subtitle">خدماتنا</span>
+                <h2 class="section-title" data-translate="services_title">حلول متكاملة للدراسة في روسيا</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- خدمة التسجيل الجامعي -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="service-badge" data-translate="most_requested">الأكثر طلباً</div>
+                        <h3 data-translate="registration_title">التسجيل الجامعي</h3>
+                        <p data-translate="registration_description">نساعدك في اختيار الجامعة المناسبة وإكمال إجراءات القبول بكل سهولة ويسر</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="registration_feature1">اختيار أفضل الجامعات</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="registration_feature2">تجهيز وتصديق الأوراق</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="registration_feature3">متابعة إجراءات القبول</span></li>
+                        </ul>
+                        <a href="https://wa.me/79964072422?text=مرحباً، أرغب في الاستفسار عن خدمة التسجيل الجامعي" class="service-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-translate="request_service">طلب الخدمة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- خدمة الترجمة -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="service-badge" data-translate="certified_translation">ترجمة معتمدة</div>
+                        <h3 data-translate="translation_title">خدمات الترجمة</h3>
+                        <p data-translate="translation_description">نقدم خدمات ترجمة معتمدة ودقيقة لجميع المستندات والوثائق المطلوبة</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="translation_feature1">ترجمة معتمدة للشهادات</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="translation_feature2">ترجمة الوثائق الرسمية</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="translation_feature3">خدمة سريعة ودقيقة</span></li>
+                        </ul>
+                        <a href="https://wa.me/79964072422?text=مرحباً، أرغب في الاستفسار عن خدمة الترجمة المعتمدة" class="service-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-translate="request_service">طلب الخدمة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- خدمة السكن -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="service-badge" data-translate="guaranteed_housing">سكن مضمون</div>
+                        <h3 data-translate="housing_title">خدمة السكن</h3>
+                        <p data-translate="housing_description">نؤمن لك السكن المناسب في السكن الجامعي أو الشقق الخاصة بأفضل الأسعار</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="housing_feature1">سكن جامعي آمن</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="housing_feature2">شقق مفروشة راقية</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="housing_feature3">مواقع استراتيجية</span></li>
+                        </ul>
+                        <a href="https://wa.me/79964072422?text=مرحباً، أرغب في الاستفسار عن خدمة السكن" class="service-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-translate="request_service">طلب الخدمة</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- قسم التأمين الطبي -->
+    <section class="insurance-section">
+        <div class="insurance-bg-animation"></div>
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle" data-translate="insurance_subtitle">التأمين الطبي</span>
+                <h2 class="section-title" data-translate="insurance_title">تأمين طبي شامل للطلاب</h2>
+                <div class="section-line"></div>
+            </div>
+
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3 data-translate="registration_admission">التسجيل والقبول</h3>
-                        <p data-translate="registration_text">نساعدك في إجراءات التسجيل والقبول في الجامعات الروسية</p>
+                <!-- معلومات التأمين -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="insurance-info">
+                        <div class="insurance-header">
+                            <div class="insurance-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 data-translate="insurance_coverage">تغطية تأمينية شاملة</h3>
+                        </div>
+                        <p class="insurance-description" data-translate="insurance_description">
+                            نقدم لطلابنا أفضل خدمات التأمين الطبي في روسيا، مع تغطية شاملة للخدمات الطبية والعلاجية
+                        </p>
+                        <div class="coverage-list">
+                            <div class="coverage-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="coverage-icon">
+                                    <i class="fas fa-hospital"></i>
+                                </div>
+                                <div class="coverage-content">
+                                    <h4 data-translate="hospital_coverage">تغطية المستشفيات</h4>
+                                    <p data-translate="hospital_coverage_desc">تغطية كاملة للعلاج في أفضل المستشفيات</p>
+                                </div>
+                            </div>
+                            <div class="coverage-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="coverage-icon">
+                                    <i class="fas fa-tooth"></i>
+                                </div>
+                                <div class="coverage-content">
+                                    <h4 data-translate="dental_coverage">العناية بالأسنان</h4>
+                                    <p data-translate="dental_coverage_desc">تغطية علاجات الأسنان الأساسية</p>
+                                </div>
+                            </div>
+                            <div class="coverage-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="coverage-icon">
+                                    <i class="fas fa-pills"></i>
+                                </div>
+                                <div class="coverage-content">
+                                    <h4 data-translate="medicine_coverage">الأدوية والعلاجات</h4>
+                                    <p data-translate="medicine_coverage_desc">تغطية الوصفات الطبية والأدوية</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-language"></i>
-                        <h3 data-translate="translation_services">خدمات الترجمة</h3>
-                        <p data-translate="translation_text">ترجمة معتمدة لجميع الوثائق المطلوبة</p>
+
+                <!-- بطاقة التأمين -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="insurance-card">
+                        <div class="card-chip">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="card-logo">
+                            <img src="images/logo.png" alt="شعار التأمين" class="img-fluid">
+                        </div>
+                        <div class="card-details">
+                            <div class="card-type" data-translate="insurance_type">تأمين طبي شامل</div>
+                            <div class="card-coverage" data-translate="card_coverage">تغطية دولية</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="coverage-amount" data-translate="coverage_amount">تغطية حتى 1,000,000 روبل</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3 data-translate="student_insurance">التأمين الطلابي</h3>
-                        <p data-translate="insurance_text">خدمات التأمين الصحي للطلاب</p>
+
+                    <div class="insurance-features">
+                        <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fas fa-clock"></i>
+                            <span data-translate="support_247">دعم على مدار الساعة</span>
+                        </div>
+                        <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fas fa-globe"></i>
+                            <span data-translate="international_coverage">تغطية دولية</span>
+                        </div>
+                        <div class="feature-item" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fas fa-phone-alt"></i>
+                            <span data-translate="emergency_service">خدمة طوارئ</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a href="https://wa.me/79964072422?text=مرحباً، أرغب في الاستفسار عن خدمة التأمين الطبي" class="insurance-cta" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-translate="request_insurance">طلب التأمين الآن</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم الأسئلة الشائعة -->
-    <section class="faq py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5" data-translate="faq">الأسئلة الشائعة</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            <span data-translate="faq_requirements">ما هي متطلبات الدراسة في روسيا؟</span>
-                        </button>
-                    </h3>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body" data-translate="faq_requirements_answer">
-                            تتضمن المتطلبات الأساسية: شهادة الثانوية العامة، جواز سفر ساري المفعول، وشهادة صحية.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <!-- قسم معرض الصور -->
-   <section class="gallery-section py-5">
-       <div class="container">
-           <div class="section-header text-center mb-5" data-aos="fade-up">
-               <h2 class="section-title">معرض الصور</h2>
-               <p class="section-subtitle">استعرض مجموعة من الصور الجميلة للدراسة في روسيا</p>
-           </div>
-           <div class="row g-4">
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                   <div class="gallery-item">
-                       <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1" alt="صورة 1" class="img-fluid">
-                   </div>
-               </div>
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                   <div class="gallery-item">
-                       <img src="https://images.unsplash.com/photo-1556610961-2fecc5927173" alt="صورة 2" class="img-fluid">
-                   </div>
-               </div>
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                   <div class="gallery-item">
-                       <img src="https://images.unsplash.com/photo-1600623050499-84929aad17c9" alt="صورة 3" class="img-fluid">
-                   </div>
-               </div>
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                   <div class="gallery-item">
-                       <img src="https://images.unsplash.com/photo-1513326738677-b964603b136d" alt="صورة 4" class="img-fluid">
-                   </div>
-               </div>
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                   <div class="gallery-item">
-                       <img src="https://images.unsplash.com/photo-1568605114967-8b1b5c6a1c3b" alt="صورة 5" class="img-fluid">
-                   </div>
-               </div>
-               <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                   <div class="gallery-item">
-                       <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1" alt="صورة 6" class="img-fluid">
-                   </div>
-               </div>
-           </div>
-       </div>
-   </section>
-
-    <!-- قسم التواصل -->
-    <section class="contact py-5 bg-light" id="contact">
-        <div class="container">
-            <h2 class="text-center mb-5">اتصل بنا</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="الاسم">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="رسالتك"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">إرسال</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <div class="map-container">
-                        <!-- سيتم إضافة الخريطة هنا -->
-                        <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
@@ -286,11 +356,17 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script>
-        AOS.init();
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                once: true, // تشغيل الأنيميشن مرة واحدة فقط
+                disable: 'mobile' // تعطيل الأنيميشن على الموبايل
+            });
+        });
     </script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
