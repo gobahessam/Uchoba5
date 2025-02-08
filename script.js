@@ -41,11 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // التعامل مع نموذج الاتصال
     const contactForm = document.querySelector('form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');
-            contactForm.reset();
-        });
+        contactForm.addEventListener('submit', submitContactForm);
     }
 
     // تفعيل أزرار الحجز
@@ -279,7 +275,98 @@ document.addEventListener('DOMContentLoaded', function() {
             support_247: "دعم طبي",
             local_coverage: "تغطية في روسيا",
             emergency_service: "خدمة الطوارئ",
-            request_insurance: "استفسر عن التأمين"
+            request_insurance: "استفسر عن التأمين",
+            
+            // ترجمات قسم الترجمة
+            translation_subtitle: "خدمات الترجمة",
+            translation_title: "خدمات ترجمة احترافية",
+            translation_description: "نقدم خدمات ترجمة احترافية ودقيقة بمختلف المجالات مع ضمان الجودة والسرعة في التنفيذ",
+            
+            // الترجمة القانونية
+            legal_translation: "الترجمة القانونية",
+            legal_translation_desc: "ترجمة معتمدة للوثائق القانونية والرسمية مع ختم وتصديق",
+            legal_docs: "وثائق قانونية",
+            official_docs: "مستندات رسمية",
+            certified_translation: "ترجمة معتمدة",
+            
+            // الترجمة الأكاديمية
+            academic_translation: "الترجمة الأكاديمية",
+            academic_translation_desc: "ترجمة دقيقة للأبحاث والوثائق الأكاديمية",
+            research_papers: "أوراق بحثية",
+            academic_docs: "وثائق أكاديمية",
+            thesis_translation: "ترجمة رسائل علمية",
+            
+            // الترجمة التجارية
+            business_translation: "الترجمة التجارية",
+            business_translation_desc: "ترجمة احترافية للوثائق والعقود التجارية",
+            contracts: "عقود تجارية",
+            business_docs: "مستندات شركات",
+            marketing_materials: "مواد تسويقية",
+            
+            // الترجمة الفورية
+            interpretation: "الترجمة الفورية",
+            interpretation_desc: "خدمات ترجمة فورية للمؤتمرات واللقاءات",
+            conferences: "مؤتمرات",
+            meetings: "لقاءات عمل",
+            events: "فعاليات",
+            
+            request_translation: "طلب خدمة الترجمة",
+            
+            // ترجمات قسم الأسئلة الشائعة
+            faq_subtitle: "الأسئلة الشائعة",
+            faq_title: "كل ما تريد معرفته عن الدراسة في روسيا",
+            faq_description: "إليك أهم الأسئلة التي يطرحها الطلاب حول الدراسة في روسيا",
+            
+            faq_q1: "ما هي متطلبات القبول في الجامعات الروسية؟",
+            faq_a1: "تشمل المتطلبات الأساسية:\n• شهادة الثانوية العامة مصدقة\n• جواز سفر ساري المفعول\n• شهادة صحية\n• صور شخصية حديثة\n• ترجمة جميع المستندات للغة الروسية",
+            
+            faq_q2: "كم تستغرق مدة الدراسة في روسيا؟",
+            faq_a2: "تختلف مدة الدراسة حسب التخصص والمرحلة:\n• البكالوريوس: 4-6 سنوات\n• الماجستير: 2 سنة\n• الدكتوراه: 3-4 سنوات\n• السنة التحضيرية: سنة واحدة",
+            
+            faq_q3: "ما هي تكاليف الدراسة والمعيشة في روسيا؟",
+            faq_a3: "تعتبر تكاليف الدراسة في روسيا معقولة مقارنة بالدول الأخرى:\n• الرسوم الدراسية: تبدأ من 2000 دولار سنوياً\n• السكن الجامعي: 100-200 دولار شهرياً\n• المصروفات الشهرية: 300-500 دولار\n• التأمين الصحي: حوالي 200 دولار سنوياً",
+            
+            faq_q4: "هل يجب أن أتعلم اللغة الروسية قبل الدراسة؟",
+            faq_a4: "نعم، معرفة اللغة الروسية مهمة للدراسة في روسيا:\n• يمكنك الالتحاق بالسنة التحضيرية لتعلم اللغة\n• بعض البرامج متوفرة باللغة الإنجليزية\n• مستوى B2 مطلوب للدراسة باللغة الروسية\n• نقدم دورات مكثفة للغة الروسية",
+            
+            faq_q5: "هل الشهادات الروسية معترف بها دولياً؟",
+            faq_a5: "نعم، الشهادات الروسية معترف بها دولياً:\n• معترف بها في معظم دول العالم\n• الجامعات الروسية مصنفة عالمياً\n• يمكن معادلة الشهادة في بلدك\n• فرص عمل واسعة للخريجين",
+            
+            // ترجمات قسم خطوات التسجيل
+            reg_steps_subtitle: "خطوات التسجيل",
+            reg_steps_title: "كيف تبدأ رحلة دراستك في روسيا",
+            reg_steps_description: "خطوات بسيطة تفصلك عن تحقيق حلمك في الدراسة بروسيا",
+            
+            step1_title: "تجهيز المستندات",
+            step1_desc: "جهز مستنداتك الأساسية: الشهادة الثانوية، جواز السفر، والصور الشخصية",
+            step1_detail1: "شهادة الثانوية العامة مصدقة",
+            step1_detail2: "صورة جواز السفر",
+            step1_detail3: "6 صور شخصية حديثة",
+            step1_detail4: "شهادة صحية معتمدة",
+            
+            step2_title: "اختيار الجامعة والتخصص",
+            step2_desc: "نساعدك في اختيار أفضل جامعة وتخصص يناسب طموحاتك",
+            step2_detail1: "تحديد التخصص المناسب",
+            step2_detail2: "اختيار الجامعة المناسبة",
+            step2_detail3: "مراجعة متطلبات القبول",
+            step2_detail4: "تقييم التكاليف والمنح",
+            
+            step3_title: "تقييم مستوى اللغة",
+            step3_desc: "تحديد مستوى لغتك الروسية وتحديد الدورة المناسبة",
+            step3_detail1: "اختبار تحديد المستوى",
+            step3_detail2: "تحديد الدورة المناسبة",
+            step3_detail3: "خطة تعلم شخصية",
+            step3_detail4: "متابعة التقدم",
+            
+            step4_title: "إجراءات السفر والإقامة",
+            step4_desc: "نساعدك في إنهاء إجراءات التأشيرة والسكن",
+            step4_detail1: "استخراج التأشيرة",
+            step4_detail2: "حجز السكن",
+            step4_detail3: "تأمين صحي شامل",
+            step4_detail4: "خدمة الاستقبال",
+            
+            start_registration: "ابدأ رحلة دراستك الآن",
+            registration_note: "نقدم استشارة مجانية لمساعدتك في اتخاذ القرار المناسب",
         },
         en: {
             site_title: 'Uchoba Study in Russia',
@@ -486,7 +573,98 @@ document.addEventListener('DOMContentLoaded', function() {
             support_247: "Medical Support",
             local_coverage: "Coverage in Russia",
             emergency_service: "Emergency Service",
-            request_insurance: "Inquire About Insurance"
+            request_insurance: "Inquire About Insurance",
+            
+            // Translation Services Section
+            translation_subtitle: "Translation Services",
+            translation_title: "Professional Translation Services",
+            translation_description: "We provide professional and accurate translation services in various fields with guaranteed quality and fast delivery",
+            
+            // Legal Translation
+            legal_translation: "Legal Translation",
+            legal_translation_desc: "Certified translation of legal and official documents with stamp and authentication",
+            legal_docs: "Legal Documents",
+            official_docs: "Official Documents",
+            certified_translation: "Certified Translation",
+            
+            // Academic Translation
+            academic_translation: "Academic Translation",
+            academic_translation_desc: "Accurate translation of research papers and academic documents",
+            research_papers: "Research Papers",
+            academic_docs: "Academic Documents",
+            thesis_translation: "Thesis Translation",
+            
+            // Business Translation
+            business_translation: "Business Translation",
+            business_translation_desc: "Professional translation of business documents and contracts",
+            contracts: "Business Contracts",
+            business_docs: "Company Documents",
+            marketing_materials: "Marketing Materials",
+            
+            // Interpretation
+            interpretation: "Interpretation Services",
+            interpretation_desc: "Interpretation services for conferences and meetings",
+            conferences: "Conferences",
+            meetings: "Business Meetings",
+            events: "Events",
+            
+            request_translation: "Request Translation Service",
+            
+            // FAQ Section Translations
+            faq_subtitle: "Frequently Asked Questions",
+            faq_title: "Everything You Need to Know About Studying in Russia",
+            faq_description: "Here are the most common questions students ask about studying in Russia",
+            
+            faq_q1: "What are the admission requirements for Russian universities?",
+            faq_a1: "Basic requirements include:\n• Certified high school diploma\n• Valid passport\n• Health certificate\n• Recent photographs\n• All documents translated to Russian",
+            
+            faq_q2: "How long does it take to study in Russia?",
+            faq_a2: "Study duration varies by program and level:\n• Bachelor's: 4-6 years\n• Master's: 2-3 years\n• PhD: 3-4 years\n• Preparatory year: 1 year",
+            
+            faq_q3: "What are the study and living costs in Russia?",
+            faq_a3: "Costs in Russia are reasonable compared to other countries:\n• Tuition fees: Starting from $2000 per year\n• University housing: $100-200 per month\n• Monthly expenses: $300-500\n• Health insurance: About $200 per year",
+            
+            faq_q4: "Do I need to learn Russian before studying?",
+            faq_a4: "Yes, knowing Russian is important for studying in Russia:\n• You can join the preparatory year to learn the language\n• Some programs are available in English\n• Level B2 is required for studying in Russian\n• We offer intensive Russian language courses",
+            
+            faq_q5: "Are Russian degrees internationally recognized?",
+            faq_a5: "Yes, Russian degrees are internationally recognized:\n• Recognized in most countries worldwide\n• Russian universities are globally ranked\n• You can validate your degree in your country\n• Wide job opportunities for graduates",
+            
+            // Registration Steps Translations
+            reg_steps_subtitle: "Registration Steps",
+            reg_steps_title: "How to Start Your Study Journey in Russia",
+            reg_steps_description: "Simple steps to achieve your dream of studying in Russia",
+            
+            step1_title: "Document Preparation",
+            step1_desc: "Prepare your essential documents: high school certificate, passport, and photos",
+            step1_detail1: "Certified high school certificate",
+            step1_detail2: "Passport copy",
+            step1_detail3: "6 recent photos",
+            step1_detail4: "Certified health certificate",
+            
+            step2_title: "Choose University & Major",
+            step2_desc: "We help you choose the best university and major that suits your ambitions",
+            step2_detail1: "Select suitable major",
+            step2_detail2: "Choose the right university",
+            step2_detail3: "Review admission requirements",
+            step2_detail4: "Evaluate costs and scholarships",
+            
+            step3_title: "Language Assessment",
+            step3_desc: "Determine your Russian language level and suitable course",
+            step3_detail1: "Level assessment test",
+            step3_detail2: "Course selection",
+            step3_detail3: "Personal learning plan",
+            step3_detail4: "Progress monitoring",
+            
+            step4_title: "Travel & Accommodation",
+            step4_desc: "We assist with visa procedures and accommodation",
+            step4_detail1: "Visa processing",
+            step4_detail2: "Accommodation booking",
+            step4_detail3: "Comprehensive insurance",
+            step4_detail4: "Reception service",
+            
+            start_registration: "Start Your Study Journey Now",
+            registration_note: "We offer free consultation to help you make the right decision",
         },
         ru: {
             site_title: 'Учеба в России Отчоба',
@@ -518,7 +696,7 @@ document.addEventListener('DOMContentLoaded', function() {
             insurance_text: "Услуги медицинского страхования для студентов",
             insurance_feature1: "Полное медицинское страхование на время учебы",
             insurance_feature2: "Покрытие экстренных случаев и лечения",
-            insurance_feature3: "Круглосуточная поддержка",
+            insurance_feature3: "Доступ на круглосуточную поддержку",
             learn_more_insurance: "Подробнее",
             faq: 'Часто Задаваемые Вопросы',
             faq_requirements: 'Требования',
@@ -690,11 +868,102 @@ document.addEventListener('DOMContentLoaded', function() {
             medicine_coverage_desc: "Покрытие основных медикаментов",
             insurance_type: "Базовое Медицинское Страхование",
             card_coverage: "Локальное Покрытие",
-            coverage_amount: "Покрытие до 500 000 рублей",
+            coverage_amount: "Покрытие до 500,000 рублей",
             support_247: "Медицинская Поддержка",
             local_coverage: "Покрытие в России",
             emergency_service: "Экстренная Служба",
-            request_insurance: "Узнать о Страховании"
+            request_insurance: "Узнать о Страховании",
+            
+            // Раздел услуг перевода
+            translation_subtitle: "Услуги перевода",
+            translation_title: "Профессиональные услуги перевода",
+            translation_description: "Мы предоставляем профессиональные и точные услуги перевода в различных областях с гарантированным качеством и быстрым выполнением",
+            
+            // Юридический перевод
+            legal_translation: "Юридический перевод",
+            legal_translation_desc: "Заверенный перевод юридических и официальных документов с печатью и заверением",
+            legal_docs: "Юридические документы",
+            official_docs: "Официальные документы",
+            certified_translation: "Заверенный перевод",
+            
+            // Академический перевод
+            academic_translation: "Академический перевод",
+            academic_translation_desc: "Точный перевод научных работ и академических документов",
+            research_papers: "Научные работы",
+            academic_docs: "Академические документы",
+            thesis_translation: "Перевод диссертаций",
+            
+            // Деловой перевод
+            business_translation: "Деловой перевод",
+            business_translation_desc: "Профессиональный перевод деловых документов и контрактов",
+            contracts: "Деловые контракты",
+            business_docs: "Документы компании",
+            marketing_materials: "Маркетинговые материалы",
+            
+            // Устный перевод
+            interpretation: "Устный перевод",
+            interpretation_desc: "Услуги устного перевода для конференций и встреч",
+            conferences: "Конференции",
+            meetings: "Деловые встречи",
+            events: "Мероприятия",
+            
+            request_translation: "Заказать услугу перевода",
+            
+            // Переводы для раздела FAQ
+            faq_subtitle: "Часто Задаваемые Вопросы",
+            faq_title: "Всё, что нужно знать об учёбе в России",
+            faq_description: "Вот самые распространенные вопросы студентов об обучении в России",
+            
+            faq_q1: "Каковы требования для поступления в российские университеты?",
+            faq_a1: "Основные требования включают:\n• Заверенный аттестат о среднем образовании\n• Действующий паспорт\n• Медицинская справка\n• Недавние фотографии\n• Все документы переведены на русский язык",
+            
+            faq_q2: "Сколько длится обучение в России?",
+            faq_a2: "Продолжительность обучения зависит от программы и уровня:\n• Бакалавриат: 4-6 лет\n• Магистратура: 2-3 года\n• Докторантура: 3-4 года\n• Подготовительный год: 1 год",
+            
+            faq_q3: "Какова стоимость обучения и проживания в России?",
+            faq_a3: "Расходы в России разумны по сравнению с другими странами:\n• Плата за обучение: от 2000$ в год\n• Общежитие: 100-200$ в месяц\n• Ежемесячные расходы: 300-500$\n• Медицинская страховка: около 200$ в год",
+            
+            faq_q4: "Нужно ли учить русский язык перед началом обучения?",
+            faq_a4: "Да, знание русского языка важно для обучения в России:\n• Можно поступить на подготовительный факультет для изучения языка\n• Некоторые программы доступны на английском языке\n• Уровень B2 требуется для обучения на русском языке\n• Мы предлагаем интенсивные курсы русского языка",
+            
+            faq_q5: "Признаются ли российские дипломы на международном уровне?",
+            faq_a5: "Да, российские дипломы признаются на международном уровне:\n• Признаются в большинстве стран мира\n• Российские университеты имеют мировой рейтинг\n• Можно подтвердить диплом в своей стране\n• Широкие возможности трудоустройства для выпускников",
+            
+            // Переводы для раздела регистрации
+            reg_steps_subtitle: "Этапы Регистрации",
+            reg_steps_title: "Как Начать Обучение в России",
+            reg_steps_description: "Простые шаги к вашей мечте об обучении в России",
+            
+            step1_title: "Подготовка Документов",
+            step1_desc: "Подготовьте необходимые документы: аттестат, паспорт и фотографии",
+            step1_detail1: "Заверенный аттестат",
+            step1_detail2: "Копия паспорта",
+            step1_detail3: "6 недавних фотографий",
+            step1_detail4: "Медицинская справка",
+            
+            step2_title: "Выбор Университета и Специальности",
+            step2_desc: "Мы помогаем выбрать лучший университет и специальность",
+            step2_detail1: "Выбор специальности",
+            step2_detail2: "Выбор университета",
+            step2_detail3: "Требования к поступлению",
+            step2_detail4: "Оценка стоимости и стипендий",
+            
+            step3_title: "Оценка Языкового Уровня",
+            step3_desc: "Определение уровня русского языка и подходящего курса",
+            step3_detail1: "Тест определения уровня",
+            step3_detail2: "Выбор курса",
+            step3_detail3: "Персональный план обучения",
+            step3_detail4: "Мониторинг прогресса",
+            
+            step4_title: "Проезд и Проживание",
+            step4_desc: "Мы помогаем с визой и размещением",
+            step4_detail1: "Оформление визы",
+            step4_detail2: "Бронирование жилья",
+            step4_detail3: "Полная страховка",
+            step4_detail4: "Встреча и размещение",
+            
+            start_registration: "Начните Обучение Сейчас",
+            registration_note: "Предлагаем бесплатную консультацию для принятия правильного решения",
         }
     };
 
@@ -752,7 +1021,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // تفعيل تغيير اللغة عند النقر
     languageItems.forEach(item => {
-        item.addEventListener('click', function(e) {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
             const lang = this.dataset.lang;
             updateLanguage(lang);
@@ -783,7 +1052,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // تحديد عناصر النافذة المنبثقة
+    // إغلاق قائمة الهيدر البرجر عند الضغط على ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            navbarToggler.click(); // إغلاق القائمة
+        }
+    });
+
+    // تعريف عناصر النافذة المنبثقة
     const serviceModal = document.getElementById('serviceModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
@@ -1066,31 +1342,183 @@ function updateWhatsAppText(lang) {
     }
 }
 
-// تحديث الترجمة عند تغيير اللغة
-function updateLanguage(lang) {
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
-        }
-    });
-    
-    // تحديث نص روابط WhatsApp
-    updateWhatsAppText(lang);
-    
-    // تحديث اتجاه الصفحة
-    document.dir = lang === 'ar' ? 'rtl' : 'ltr';
+// تحديث الترجمات
+const newTranslations = {
+    ar: {
+        ...translations.ar,
+        form_success_message: 'سيتم تحويلك إلى الواتساب للتواصل معنا'
+    },
+    en: {
+        ...translations.en,
+        form_success_message: 'You will be redirected to WhatsApp to contact us'
+    },
+    ru: {
+        ...translations.ru,
+        form_success_message: 'Вы будете перенаправлены в WhatsApp для связи с нами'
+    }
+};
+
+// دمج الترجمات الجديدة
+Object.keys(translations).forEach(lang => {
+    translations[lang] = { ...translations[lang], ...newTranslations[lang] };
+});
+
+// رقم الواتساب الخاص بالشركة
+const WHATSAPP_NUMBER = '79964072422';
+
+// دالة لعرض نافذة التواصل
+function showContactModal() {
+    const modal = new bootstrap.Modal(document.getElementById('contactModal'));
+    modal.show();
 }
 
-// إضافة مستمعي الأحداث لأزرار تغيير اللغة
-document.querySelectorAll('[data-lang]').forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const lang = button.getAttribute('data-lang');
-        updateLanguage(lang);
-        
-        // تحديث الزر النشط
-        document.querySelectorAll('[data-lang]').forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+// دالة لمعالجة نموذج التواصل
+function submitContactForm(event) {
+    event.preventDefault();
+    
+    // جمع بيانات النموذج
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        specialization: document.getElementById('specialization').value,
+        message: document.getElementById('message').value
+    };
+
+    // تجهيز نص الرسالة للواتساب
+    const whatsappMessage = `
+*طلب تسجيل جديد*%0a
+------------------------%0a
+*الاسم:* ${formData.name}%0a
+*البريد الإلكتروني:* ${formData.email}%0a
+*رقم الهاتف:* ${formData.phone}%0a
+*التخصص المطلوب:* ${formData.specialization}%0a
+*الرسالة:* ${formData.message}%0a
+------------------------%0a
+تم إرسال الطلب من موقع أوتشوبا`.trim();
+
+    // إنشاء رابط الواتساب
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${whatsappMessage}`;
+
+    // إظهار رسالة نجاح
+    Swal.fire({
+        icon: 'success',
+        title: translations[currentLanguage].form_success_title || 'تم الإرسال بنجاح',
+        text: translations[currentLanguage].form_success_message || 'سيتم تحويلك إلى الواتساب للتواصل معنا',
+        confirmButtonText: translations[currentLanguage].ok || 'حسناً'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // فتح الواتساب في نافذة جديدة
+            window.open(whatsappURL, '_blank');
+            
+            // إغلاق النافذة المنبثقة
+            const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+            modal.hide();
+
+            // إعادة تعيين النموذج
+            document.getElementById('contactForm').reset();
+        }
     });
+}
+
+// تهيئة النموذج عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', function() {
+    // رقم الواتساب
+    const WHATSAPP_NUMBER = '79964072422';
+
+    // تعريف دالة فتح النموذج
+    window.showContactModal = function() {
+        const modal = new bootstrap.Modal(document.getElementById('contactModal'));
+        modal.show();
+    };
+
+    // تعريف دالة إرسال النموذج
+    window.submitContactForm = function(event) {
+        event.preventDefault();
+        
+        // جمع البيانات
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const specialization = document.getElementById('specialization').value;
+        const message = document.getElementById('message').value;
+
+        // تجهيز نص الرسالة
+        const text = `*طلب تسجيل جديد*%0A%0A` +
+                     `*الاسم:* ${name}%0A` +
+                     `*البريد الإلكتروني:* ${email}%0A` +
+                     `*رقم الهاتف:* ${phone}%0A` +
+                     `*التخصص المطلوب:* ${specialization}%0A` +
+                     `*الرسالة:* ${message}%0A%0A` +
+                     `تم الإرسال من موقع أوتشوبا`;
+
+        // فتح الواتساب مباشرة
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+
+        // إغلاق النافذة المنبثقة
+        const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+        if (modal) {
+            modal.hide();
+        }
+
+        // مسح النموذج
+        document.getElementById('contactForm').reset();
+    };
+
+    // إضافة مستمع الحدث للنموذج
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', window.submitContactForm);
+    }
+});
+```
+```javascript
+// رقم الواتساب الخاص بالشركة
+const WHATSAPP_NUMBER = '79964072422';
+
+// دالة لعرض نافذة التواصل
+function showContactModal() {
+    const modal = new bootstrap.Modal(document.getElementById('contactModal'));
+    modal.show();
+}
+
+// دالة لمعالجة نموذج التواصل
+function submitContactForm(e) {
+    e.preventDefault();
+
+    // جمع البيانات من النموذج
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const specialization = document.getElementById('specialization').value;
+    const message = document.getElementById('message').value;
+
+    // تجهيز نص الرسالة
+    const text = `*طلب تسجيل جديد*%0A%0A` +
+                 `*الاسم:* ${name}%0A` +
+                 `*البريد الإلكتروني:* ${email}%0A` +
+                 `*رقم الهاتف:* ${phone}%0A` +
+                 `*التخصص المطلوب:* ${specialization}%0A` +
+                 `*الرسالة:* ${message}%0A%0A` +
+                 `تم الإرسال من موقع أوتشوبا`;
+
+    // فتح الواتساب مباشرة
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+
+    // إغلاق النافذة المنبثقة
+    const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+    if (modal) {
+        modal.hide();
+    }
+
+    // مسح النموذج
+    document.getElementById('contactForm').reset();
+}
+
+// إضافة مستمع الحدث للنموذج
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', submitContactForm);
+    }
 });

@@ -862,8 +862,133 @@ body {
 
 /* قسم الأسئلة الشائعة */
 .faq-section {
-    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-    padding: 4rem 0;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,123,255,0.1) 0%, rgba(0,123,255,0) 100%);
+    z-index: 0;
+}
+
+.faq-accordion {
+    position: relative;
+    z-index: 1;
+}
+
+.faq-accordion .accordion-item {
+    border: none;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-accordion .accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.faq-accordion .accordion-button {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    background: #fff;
+    border: none;
+    border-radius: 10px !important;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: #007bff;
+    background: #fff;
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,123,255,0.25);
+}
+
+.faq-accordion .accordion-button::after {
+    background-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+}
+
+.faq-accordion .accordion-button i {
+    margin-left: 1rem;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.faq-accordion .accordion-body {
+    padding: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.faq-accordion .accordion-body ul {
+    padding-right: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.faq-accordion .accordion-body li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.faq-accordion .accordion-body li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: -1em;
+}
+
+/* تحريك للأسئلة */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-accordion .accordion-item {
+    animation: slideIn 0.5s ease forwards;
+}
+
+.faq-accordion .accordion-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.faq-accordion .accordion-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.faq-accordion .accordion-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.faq-accordion .accordion-item:nth-child(5) {
+    animation-delay: 0.4s;
 }
 
 .title-line {
@@ -1170,7 +1295,7 @@ footer a:hover {
 }
 
 .feature-card ul li:before {
-    content: '•';
+    content: "•";
     color: var(--primary-color);
     margin-left: 0.5rem;
     font-size: 1.2rem;
@@ -2292,4 +2417,429 @@ footer a:hover {
     .coverage-item {
         padding: 15px;
     }
+}
+
+/* قسم خدمات الترجمة */
+.translation-section {
+    background-color: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.translation-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.05) 0%, rgba(var(--primary-rgb), 0) 100%);
+    z-index: 0;
+}
+
+.translation-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: rgba(var(--primary-rgb), 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background: var(--primary);
+}
+
+.service-card:hover .service-icon i {
+    color: #fff;
+}
+
+.service-card h4 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features li {
+    color: var(--dark);
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+.request-service-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.2);
+}
+
+.request-service-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.3);
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* قسم خطوات التسجيل */
+.registration-steps {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.registration-steps::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="%230d6efd" opacity="0.1"/></svg>') repeat;
+    z-index: 0;
+}
+
+.steps-timeline {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 0;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step-item::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 3rem;
+    width: 2px;
+    background: linear-gradient(to bottom, #007bff, transparent);
+    transform: translateX(-50%);
+}
+
+.step-item:last-child::before {
+    display: none;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.step-item:hover .step-icon {
+    transform: rotate(360deg);
+    background: #007bff;
+}
+
+.step-icon i {
+    font-size: 1.8rem;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.step-item:hover .step-icon i {
+    color: #fff;
+}
+
+.step-title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.step-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.step-details {
+    background: rgba(0, 123, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.step-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.step-list li {
+    position: relative;
+    padding-right: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.step-list li::before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.registration-cta {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.registration-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+.registration-note {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* تحريك للخطوات */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.step-item {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.step-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.step-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.step-item:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* تأثيرات إضافية عند التحريك */
+@media (hover: hover) {
+    .step-item:hover .step-number {
+        animation: pulse 1s infinite;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+/* تحسينات للموبايل */
+@media (max-width: 768px) {
+    .step-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-number {
+        margin: 0 0 1rem 0;
+    }
+
+    .step-list li {
+        padding-right: 0;
+        padding-top: 1.5rem;
+    }
+
+    .step-list li::before {
+        right: 50%;
+        top: 0;
+        transform: translateX(50%);
+    }
+}
+
+/* تحسينات التجاوب مع سطح المكتب */
+@media (min-width: 992px) {
+    .steps-timeline {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .step-item {
+        margin-bottom: 2rem;
+    }
+
+    .step-item::before {
+        display: none;
+    }
+
+    .step-content {
+        padding: 2rem;
+    }
+
+    .step-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .step-title {
+        font-size: 1.6rem;
+    }
+
+    .step-description {
+        font-size: 1.1rem;
+    }
+
+    .step-details {
+        padding: 2rem;
+    }
+
+    .registration-cta {
+        font-size: 1.4rem;
+        padding: 1.2rem 3rem;
+    }
+}
+
+/* تحسين حركة الأزرار */
+.registration-cta {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.registration-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.registration-cta:hover::before {
+    transform: translateX(100%) rotate(45deg);
+}
+
+.registration-cta:active {
+    transform: scale(0.95);
 }
