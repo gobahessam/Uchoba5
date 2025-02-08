@@ -1969,281 +1969,229 @@ footer a:hover {
 }
 
 .insurance-info {
-    padding: 30px;
+    padding: 35px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.insurance-info:hover {
+    transform: translateY(-5px);
 }
 
 .insurance-header {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .insurance-icon {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 25px;
+    transition: all 0.3s ease;
+}
+
+.insurance-icon:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(360deg);
 }
 
 .insurance-icon i {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #ffffff;
 }
 
 .insurance-header h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0;
-    font-weight: 600;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .insurance-description {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     color: rgba(255, 255, 255, 0.9);
 }
 
-.coverage-list {
-    display: grid;
-    gap: 20px;
-}
-
 .coverage-item {
-    display: flex;
-    align-items: flex-start;
-    padding: 20px;
+    padding: 25px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .coverage-item:hover {
-    transform: translateX(-5px);
+    transform: translateX(-8px);
     background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .coverage-icon {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 15px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.coverage-item:hover .coverage-icon {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(360deg);
 }
 
 .coverage-icon i {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #ffffff;
 }
 
 .coverage-content h4 {
-    font-size: 1.2rem;
-    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
     font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .coverage-content p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* بطاقة التأمين */
 .insurance-card {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 25px;
+    padding: 35px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
-    min-height: 250px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    margin-bottom: 35px;
+    min-height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
-.insurance-card::before {
+.insurance-card:hover {
+    transform: translateY(-10px) rotate3d(1, 1, 0, 5deg);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* تحسينات زر طلب الخدمة */
+.insurance-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 35px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.insurance-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(37, 211, 102, 0.4);
+}
+
+.insurance-cta::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h200v200H0z" fill="none"/><path d="M-50 100c0-82.8 67.2-150 150-150s150 67.2 150 150-67.2 150-150 150S-50 182.8-50 100" stroke="%23ffffff" stroke-width="2" fill="none" opacity="0.1"/></svg>') no-repeat center;
-    animation: cardPattern 15s linear infinite;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
 }
 
-@keyframes cardPattern {
-    0% {
-        transform: rotate(0deg);
-    }
+.insurance-cta:hover::before {
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
     100% {
-        transform: rotate(360deg);
+        transform: translateX(100%);
     }
-}
-
-.card-chip {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 2rem;
-    color: #ffd700;
-    opacity: 0.8;
-}
-
-.card-logo {
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.card-details {
-    position: relative;
-    z-index: 1;
-}
-
-.card-type {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.card-coverage {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
-}
-
-.card-footer {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.coverage-amount {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #ffd700;
-}
-
-/* ميزات التأمين */
-.insurance-features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.feature-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.feature-item i {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #ffd700;
-}
-
-.feature-item span {
-    display: block;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* زر طلب التأمين */
-.insurance-cta {
-    display: inline-flex;
-    align-items: center;
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-    color: #ffffff !important;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
-}
-
-.insurance-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
 }
 
 .insurance-cta i {
-    font-size: 1.3rem;
-    margin-left: 10px;
+    font-size: 1.4rem;
+    margin-left: 12px;
+    transition: transform 0.3s ease;
+}
+
+.insurance-cta:hover i {
+    transform: scale(1.2);
 }
 
 /* تحسينات التجاوب */
 @media (max-width: 991px) {
+    .insurance-info,
     .insurance-card {
-        margin-top: 30px;
+        margin-bottom: 30px;
     }
     
-    .insurance-features {
-        grid-template-columns: repeat(2, 1fr);
+    .insurance-header h3 {
+        font-size: 1.8rem;
+    }
+    
+    .insurance-description {
+        font-size: 1.1rem;
+    }
+    
+    .coverage-content h4 {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 767px) {
     .insurance-section {
-        padding: 60px 0;
+        padding: 70px 0;
     }
     
-    .insurance-features {
-        grid-template-columns: 1fr;
+    .insurance-info {
+        padding: 25px;
+    }
+    
+    .insurance-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .insurance-icon {
+        margin: 0 0 20px 0;
     }
     
     .coverage-item {
-        padding: 15px;
+        text-align: center;
     }
     
-    .insurance-header h3 {
-        font-size: 1.5rem;
+    .coverage-icon {
+        margin: 0 auto 15px;
     }
-}
-
-/* تحسينات RTL */
-[dir="rtl"] .insurance-icon {
-    margin-right: 0;
-    margin-left: 20px;
-}
-
-[dir="rtl"] .coverage-icon {
-    margin-right: 0;
-    margin-left: 15px;
-}
-
-[dir="rtl"] .insurance-cta i {
-    margin-right: 0;
-    margin-left: 10px;
-}
-
-[dir="rtl"] .card-chip {
-    right: auto;
-    left: 30px;
 }

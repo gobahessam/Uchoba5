@@ -230,7 +230,7 @@
 
     
     <!-- قسم التأمين الطبي -->
-    <section class="insurance-section">
+    <section class="insurance-section" id="insurance">
         <div class="insurance-bg-animation"></div>
         <div class="container">
             <div class="section-header text-center mb-5" data-aos="fade-up">
@@ -239,7 +239,7 @@
                 <div class="section-line"></div>
             </div>
 
-            <div class="row">
+            <div class="row align-items-center">
                 <!-- معلومات التأمين -->
                 <div class="col-lg-6" data-aos="fade-right">
                     <div class="insurance-info">
@@ -296,8 +296,6 @@
                         <div class="card-details">
                             <div class="card-type" data-translate="insurance_type">تأمين طبي شامل</div>
                             <div class="card-coverage" data-translate="card_coverage">تغطية دولية</div>
-                        </div>
-                        <div class="card-footer">
                             <div class="coverage-amount" data-translate="coverage_amount">تغطية حتى 1,000,000 روبل</div>
                         </div>
                     </div>
@@ -318,7 +316,10 @@
                     </div>
 
                     <div class="text-center mt-4">
-                        <a href="https://wa.me/79964072422?text=مرحباً، أرغب في الاستفسار عن خدمة التأمين الطبي" class="insurance-cta" target="_blank">
+                        <a href="https://wa.me/79964072422?text=مرحباً، أرغب في الاستفسار عن خدمة التأمين الطبي" 
+                           class="insurance-cta" 
+                           target="_blank"
+                           onclick="gtag('event', 'insurance_request', {'event_category': 'WhatsApp', 'event_label': 'Insurance Service'});">
                             <i class="fab fa-whatsapp"></i>
                             <span data-translate="request_insurance">طلب التأمين الآن</span>
                         </a>
