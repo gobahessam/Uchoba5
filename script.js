@@ -868,7 +868,7 @@ document.addEventListener('DOMContentLoaded', function() {
             medicine_coverage_desc: "Покрытие основных медикаментов",
             insurance_type: "Базовое Медицинское Страхование",
             card_coverage: "Локальное Покрытие",
-            coverage_amount: "Покрытие до 500,000 рублей",
+            coverage_amount: "Покрытие до 500 000 рублей",
             support_247: "Медицинская Поддержка",
             local_coverage: "Покрытие в России",
             emergency_service: "Экстренная Служба",
@@ -1420,105 +1420,3 @@ function submitContactForm(event) {
         }
     });
 }
-
-// تهيئة النموذج عند تحميل الصفحة
-document.addEventListener('DOMContentLoaded', function() {
-    // رقم الواتساب
-    const WHATSAPP_NUMBER = '79964072422';
-
-    // تعريف دالة فتح النموذج
-    window.showContactModal = function() {
-        const modal = new bootstrap.Modal(document.getElementById('contactModal'));
-        modal.show();
-    };
-
-    // تعريف دالة إرسال النموذج
-    window.submitContactForm = function(event) {
-        event.preventDefault();
-        
-        // جمع البيانات
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const specialization = document.getElementById('specialization').value;
-        const message = document.getElementById('message').value;
-
-        // تجهيز نص الرسالة
-        const text = `*طلب تسجيل جديد*%0A%0A` +
-                     `*الاسم:* ${name}%0A` +
-                     `*البريد الإلكتروني:* ${email}%0A` +
-                     `*رقم الهاتف:* ${phone}%0A` +
-                     `*التخصص المطلوب:* ${specialization}%0A` +
-                     `*الرسالة:* ${message}%0A%0A` +
-                     `تم الإرسال من موقع أوتشوبا`;
-
-        // فتح الواتساب مباشرة
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
-
-        // إغلاق النافذة المنبثقة
-        const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-        if (modal) {
-            modal.hide();
-        }
-
-        // مسح النموذج
-        document.getElementById('contactForm').reset();
-    };
-
-    // إضافة مستمع الحدث للنموذج
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', window.submitContactForm);
-    }
-});
-```
-```javascript
-// رقم الواتساب الخاص بالشركة
-const WHATSAPP_NUMBER = '79964072422';
-
-// دالة لعرض نافذة التواصل
-function showContactModal() {
-    const modal = new bootstrap.Modal(document.getElementById('contactModal'));
-    modal.show();
-}
-
-// دالة لمعالجة نموذج التواصل
-function submitContactForm(e) {
-    e.preventDefault();
-
-    // جمع البيانات من النموذج
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const specialization = document.getElementById('specialization').value;
-    const message = document.getElementById('message').value;
-
-    // تجهيز نص الرسالة
-    const text = `*طلب تسجيل جديد*%0A%0A` +
-                 `*الاسم:* ${name}%0A` +
-                 `*البريد الإلكتروني:* ${email}%0A` +
-                 `*رقم الهاتف:* ${phone}%0A` +
-                 `*التخصص المطلوب:* ${specialization}%0A` +
-                 `*الرسالة:* ${message}%0A%0A` +
-                 `تم الإرسال من موقع أوتشوبا`;
-
-    // فتح الواتساب مباشرة
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
-
-    // إغلاق النافذة المنبثقة
-    const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-    if (modal) {
-        modal.hide();
-    }
-
-    // مسح النموذج
-    document.getElementById('contactForm').reset();
-}
-
-// إضافة مستمع الحدث للنموذج
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', submitContactForm);
-    }
-});
