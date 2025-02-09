@@ -369,6 +369,28 @@ document.addEventListener('DOMContentLoaded', function() {
             
             start_registration: "ابدأ رحلة دراستك الآن",
             registration_note: "نقدم استشارة مجانية لمساعدتك في اتخاذ القرار المناسب",
+            
+            landmarks: 'معلم سياحي',
+            restaurants: 'مطعم',
+            hotels: 'فندق',
+            
+            sochi_offers: 'عروض سوتشي المميزة',
+            sochi_offers_subtitle: 'اكتشف أفضل العروض السياحية في سوتشي',
+            summer_package: 'باقة الصيف',
+            summer_package_desc: '7 أيام على شاطئ البحر الأسود',
+            summer_package_price: 'من 500 دولار',
+            winter_package: 'باقة الشتاء',
+            winter_package_desc: '5 أيام في منتجعات التزلج',
+            winter_package_price: 'من 600 دولار',
+            family_package: 'باقة العائلة',
+            family_package_desc: 'رحلة عائلية لمدة 10 أيام',
+            family_package_price: 'من 1200 دولار',
+            book_now: 'احجز الآن',
+            package_includes: 'تشمل الباقة',
+            flight_included: 'تذاكر الطيران',
+            hotel_included: 'إقامة فندقية',
+            transport_included: 'المواصلات',
+            activities_included: 'الأنشطة السياحية',
         },
         en: {
             site_title: 'Uchoba Study in Russia',
@@ -669,6 +691,28 @@ document.addEventListener('DOMContentLoaded', function() {
             
             start_registration: "Start Your Study Journey Now",
             registration_note: "We offer free consultation to help you make the right decision",
+            
+            landmarks: 'Landmark',
+            restaurants: 'Restaurant',
+            hotels: 'Hotel',
+            
+            sochi_offers: 'Special Sochi Offers',
+            sochi_offers_subtitle: 'Discover the best tourism packages in Sochi',
+            summer_package: 'Summer Package',
+            summer_package_desc: '7 days at Black Sea beach',
+            summer_package_price: 'From $500',
+            winter_package: 'Winter Package',
+            winter_package_desc: '5 days at ski resorts',
+            winter_package_price: 'From $600',
+            family_package: 'Family Package',
+            family_package_desc: '10 days family trip',
+            family_package_price: 'From $1,200',
+            book_now: 'Book Now',
+            package_includes: 'Package Includes',
+            flight_included: 'Flight Tickets',
+            hotel_included: 'Hotel Stay',
+            transport_included: 'Transportation',
+            activities_included: 'Tourist Activities',
         },
         ru: {
             site_title: 'Учеба в России Отчоба',
@@ -970,6 +1014,28 @@ document.addEventListener('DOMContentLoaded', function() {
             
             start_registration: "Начните Обучение Сейчас",
             registration_note: "Предлагаем бесплатную консультацию для принятия правильного решения",
+            
+            landmarks: 'Достопримечательность',
+            restaurants: 'Ресторан',
+            hotels: 'Отель',
+            
+            sochi_offers: 'Специальные предложения Сочи',
+            sochi_offers_subtitle: 'Откройте для себя лучшие туристические пакеты в Сочи',
+            summer_package: 'Летний пакет',
+            summer_package_desc: '7 дней на Черном море',
+            summer_package_price: 'От $500',
+            winter_package: 'Зимний пакет',
+            winter_package_desc: '5 дней в горнолыжных курортах',
+            winter_package_price: 'От $600',
+            family_package: 'Семейный пакет',
+            family_package_desc: '10-дневное семейное путешествие',
+            family_package_price: 'От $1,200',
+            book_now: 'Забронировать',
+            package_includes: 'Пакет включает',
+            flight_included: 'Авиабилеты',
+            hotel_included: 'Проживание',
+            transport_included: 'Транспорт',
+            activities_included: 'Туристические мероприятия',
         }
     };
 
@@ -1255,7 +1321,29 @@ const translations = {
         housing_feature2: "شقق مفروشة راقية",
         housing_feature3: "مواقع استراتيجية",
         
-        request_service: "طلب الخدمة"
+        request_service: "طلب الخدمة",
+        
+        landmarks: 'معلم سياحي',
+        restaurants: 'مطعم',
+        hotels: 'فندق',
+        
+        sochi_offers: 'عروض سوتشي المميزة',
+        sochi_offers_subtitle: 'اكتشف أفضل العروض السياحية في سوتشي',
+        summer_package: 'باقة الصيف',
+        summer_package_desc: '7 أيام على شاطئ البحر الأسود',
+        summer_package_price: 'من 500 دولار',
+        winter_package: 'باقة الشتاء',
+        winter_package_desc: '5 أيام في منتجعات التزلج',
+        winter_package_price: 'من 600 دولار',
+        family_package: 'باقة العائلة',
+        family_package_desc: 'رحلة عائلية لمدة 10 أيام',
+        family_package_price: 'من 1200 دولار',
+        book_now: 'احجز الآن',
+        package_includes: 'تشمل الباقة',
+        flight_included: 'تذاكر الطيران',
+        hotel_included: 'إقامة فندقية',
+        transport_included: 'المواصلات',
+        activities_included: 'الأنشطة السياحية',
     },
     en: {
         services_subtitle: "Our Services",
@@ -1282,7 +1370,29 @@ const translations = {
         housing_feature2: "Luxury furnished apartments",
         housing_feature3: "Strategic locations",
         
-        request_service: "Request Service"
+        request_service: "Request Service",
+        
+        landmarks: 'Landmark',
+        restaurants: 'Restaurant',
+        hotels: 'Hotel',
+        
+        sochi_offers: 'Special Sochi Offers',
+        sochi_offers_subtitle: 'Discover the best tourism packages in Sochi',
+        summer_package: 'Summer Package',
+        summer_package_desc: '7 days at Black Sea beach',
+        summer_package_price: 'From $500',
+        winter_package: 'Winter Package',
+        winter_package_desc: '5 days at ski resorts',
+        winter_package_price: 'From $600',
+        family_package: 'Family Package',
+        family_package_desc: '10 days family trip',
+        family_package_price: 'From $1,200',
+        book_now: 'Book Now',
+        package_includes: 'Package Includes',
+        flight_included: 'Flight Tickets',
+        hotel_included: 'Hotel Stay',
+        transport_included: 'Transportation',
+        activities_included: 'Tourist Activities',
     },
     ru: {
         services_subtitle: "Наши Услуги",
@@ -1309,44 +1419,31 @@ const translations = {
         housing_feature2: "Элитные меблированные квартиры",
         housing_feature3: "Стратегическое расположение",
         
-        request_service: "Заказать услугу"
+        request_service: "Заказать услугу",
+        
+        landmarks: 'Достопримечательность',
+        restaurants: 'Ресторан',
+        hotels: 'Отель',
+        
+        sochi_offers: 'Специальные предложения Сочи',
+        sochi_offers_subtitle: 'Откройте для себя лучшие туристические пакеты в Сочи',
+        summer_package: 'Летний пакет',
+        summer_package_desc: '7 дней на Черном море',
+        summer_package_price: 'От $500',
+        winter_package: 'Зимний пакет',
+        winter_package_desc: '5 дней в горнолыжных курортах',
+        winter_package_price: 'От $600',
+        family_package: 'Семейный пакет',
+        family_package_desc: '10-дневное семейное путешествие',
+        family_package_price: 'От $1,200',
+        book_now: 'Забронировать',
+        package_includes: 'Пакет включает',
+        flight_included: 'Авиабилеты',
+        hotel_included: 'Проживание',
+        transport_included: 'Транспорт',
+        activities_included: 'Туристические мероприятия',
     }
 };
-
-// تحديث نص WhatsApp حسب اللغة
-function updateWhatsAppText(lang) {
-    const registrationLink = document.querySelector('a[href*="التسجيل"]');
-    const translationLink = document.querySelector('a[href*="الترجمة"]');
-    const housingLink = document.querySelector('a[href*="السكن"]');
-    
-    const texts = {
-        ar: {
-            registration: "مرحباً، أرغب في الاستفسار عن خدمة التسجيل الجامعي",
-            translation: "مرحباً، أرغب في الاستفسار عن خدمة الترجمة المعتمدة",
-            housing: "مرحباً، أرغب في الاستفسار عن خدمة السكن"
-        },
-        en: {
-            registration: "Hello, I would like to inquire about the university registration service",
-            translation: "Hello, I would like to inquire about the certified translation service",
-            housing: "Hello, I would like to inquire about the housing service"
-        },
-        ru: {
-            registration: "Здравствуйте, я хотел бы узнать об услуге регистрации в университете",
-            translation: "Здравствуйте, я хотел бы узнать об услуге сертифицированного перевода",
-            housing: "Здравствуйте, я хотел бы узнать об услуге размещения"
-        }
-    };
-    
-    if (registrationLink) {
-        registrationLink.href = `https://wa.me/79964072422?text=${encodeURIComponent(texts[lang].registration)}`;
-    }
-    if (translationLink) {
-        translationLink.href = `https://wa.me/79964072422?text=${encodeURIComponent(texts[lang].translation)}`;
-    }
-    if (housingLink) {
-        housingLink.href = `https://wa.me/79964072422?text=${encodeURIComponent(texts[lang].housing)}`;
-    }
-}
 
 // تحديث الترجمات
 const newTranslations = {
