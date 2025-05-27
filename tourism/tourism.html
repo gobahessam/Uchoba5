@@ -3,26 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="أوتشوبا للسياحة في روسيا - خدمات سياحية متكاملة لزيارة روسيا">
     <title data-translate="tourism_site_title">أوتشوبا للسياحة في روسيا</title>
-    
-    <!-- تحسين تحميل الموارد -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://images.unsplash.com">
-    
-    <!-- تحميل مسبق للملفات المهمة -->
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="tourism-style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="tourism-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body class="tourism-theme">
     <!-- القائمة العلوية -->
@@ -40,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="../index.html">
                             <i class="fas fa-graduation-cap"></i>
                             <span data-translate="study">الدراسة</span>
                         </a>
@@ -64,19 +50,19 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <a class="dropdown-item active" href="#" data-lang="ar">
+                                <a class="dropdown-item active" href="#" data-lang="ar" id="ar-btn">
                                     <img src="https://flagcdn.com/24x18/sa.png" alt="العربية" class="lang-flag">
                                     العربية
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#" data-lang="en">
+                                <a class="dropdown-item" href="#" data-lang="en" id="en-btn">
                                     <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="lang-flag">
                                     English
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#" data-lang="ru">
+                                <a class="dropdown-item" href="#" data-lang="ru" id="ru-btn">
                                     <img src="https://flagcdn.com/24x18/ru.png" alt="Русский" class="lang-flag">
                                     Русский
                                 </a>
@@ -163,7 +149,7 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="destination-card">
                         <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="موسكو" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1" alt="موسكو">
                             <div class="destination-overlay">
                                 <div class="destination-meta">
                                     <span class="meta-item">
@@ -197,7 +183,7 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="destination-card">
                         <div class="destination-image">
-                            <img src="https://images.unsplash.com/photo-1556610961-2fecc5927173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="سانت بطرسبرغ" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1556610961-2fecc5927173" alt="سانت بطرسبرغ">
                             <div class="destination-overlay">
                                 <div class="destination-meta">
                                     <span class="meta-item">
@@ -460,26 +446,33 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
-    <script src="script.js" defer></script>
-    
-    <!-- تحسين تحميل الصور -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../script.js"></script>
+    <script src="tourism-script.js"></script>
     <script>
-        // تفعيل تحميل الصور بشكل كسول
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img:not([loading])');
-            images.forEach(img => {
-                img.setAttribute('loading', 'lazy');
-            });
-            
-            // تهيئة مكتبة AOS للتأثيرات الحركية
-            AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true
-            });
+        // تهيئة AOS
+        AOS.init();
+        
+        // إضافة مستمعي الأحداث لأزرار تغيير اللغة
+        document.getElementById('ar-btn').addEventListener('click', () => {
+            updateTourismLanguage('ar');
+            document.dir = 'rtl';
         });
+        
+        document.getElementById('en-btn').addEventListener('click', () => {
+            updateTourismLanguage('en');
+            document.dir = 'ltr';
+        });
+        
+        document.getElementById('ru-btn').addEventListener('click', () => {
+            updateTourismLanguage('ru');
+            document.dir = 'ltr';
+        });
+
+        // تحديث اللغة الافتراضية
+        updateTourismLanguage(getCurrentLanguage());
     </script>
 </body>
 </html>

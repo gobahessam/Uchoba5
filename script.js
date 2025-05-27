@@ -1,10 +1,15 @@
-// تفعيل التمرير السلس للروابط
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+// تفعيل التمرير السلس للروابط - تحسين الأداء باستخدام التفويض
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A' && e.target.getAttribute('href') && e.target.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const targetElement = document.querySelector(e.target.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
     });
 });
 
@@ -279,6 +284,16 @@ document.addEventListener('DOMContentLoaded', function() {
             emergency_service: "خدمة الطوارئ",
             request_insurance: "استفسر عن التأمين",
             
+            // ترجمات قسم الجامعات
+            universities_subtitle: "شركاؤنا",
+            universities_title: "الجامعات التي نتعامل معها",
+            universities_description: "نفخر بشراكتنا مع أفضل الجامعات الروسية المرموقة",
+            chechen_university: "جامعة الشيشان الحكومية",
+            sechenov_university: "جامعة سيتشينوف الطبية",
+            russian_medical_university: "الجامعة الطبية الحكومية الروسية",
+            northwestern_medical_university: "جامعة الشمال الغربية الطبية",
+            visit_website: "زيارة الموقع الرسمي",
+            
             // ترجمات قسم الترجمة
             translation_subtitle: "خدمات الترجمة",
             translation_title: "خدمات ترجمة احترافية",
@@ -487,6 +502,16 @@ document.addEventListener('DOMContentLoaded', function() {
             price_starting_from: 'Starting from $999',
             book_now: 'Book Now',
             discover_russia: "Discover Russia",
+            
+            // Universities section translations
+            universities_subtitle: "Our Partners",
+            universities_title: "Universities We Work With",
+            universities_description: "We are proud to partner with the best prestigious Russian universities",
+            chechen_university: "Chechen State University",
+            sechenov_university: "Sechenov Medical University",
+            russian_medical_university: "Russian State Medical University",
+            northwestern_medical_university: "Northwestern Medical University",
+            visit_website: "Visit Official Website",
             tourism_title: "Unforgettable Journey in Russia",
             tourism_description: "Explore Russia's enchanting beauty, from historic palaces to breathtaking landscapes",
             destinations: "Destinations",
@@ -783,6 +808,16 @@ document.addEventListener('DOMContentLoaded', function() {
             moscow_description: 'Яркая и историческая столица России',
             saint_petersburg: 'Санкт-Петербург',
             petersburg_description: 'Город дворцов, искусства и культуры',
+            
+            // Раздел университетов
+            universities_subtitle: "Наши партнеры",
+            universities_title: "Университеты, с которыми мы работаем",
+            universities_description: "Мы гордимся сотрудничеством с лучшими престижными российскими университетами",
+            chechen_university: "Чеченский государственный университет",
+            sechenov_university: "Медицинский университет Сеченова",
+            russian_medical_university: "Российский государственный медицинский университет",
+            northwestern_medical_university: "Северо-Западный медицинский университет",
+            visit_website: "Посетить официальный сайт",
             kazan: 'Казань',
             kazan_description: 'Историческая столица Татарстана',
             sochi: 'Сочи',
